@@ -29,9 +29,15 @@ Table of Contents
 - [Rules](#rules)
 - [How to go about it](#how-to-go-about-it)
 - [Visualization](#visualization)
+- [Resources](#resources)
 
 GOL
 ===
+
+<p><img class="left" src="/images/Nov14/Game_of_life_pulsar.gif" width="200" />
+“Game of life pulsar” by JokeySmurf <a href="http://commons.wikimedia.org/wiki/File:Game_of_life_pulsar.gif#mediaviewer/File:Game_of_life_pulsar.gif">Licensed under Public domain via Wikimedia Commons</a></p>
+
+bla bla bla
 
 
 Rules
@@ -46,6 +52,8 @@ Game of Life "exists" in an infinite two-dimensional orthogonal grid of square c
 
 The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed. Births and deaths happen simultaneously, and the discrete moment at which this happens is sometimes called a tick (in other words, each generation is a pure function of the one before). The rules continue to be applied repeatedly to create further generations.
 
+Check online an [interactive example](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/)
+
 How to go about it (testing)
 ============================
 
@@ -56,9 +64,13 @@ The reality is that it is not necessary to see to believe (although it surely he
 So make sure you test well. It is an art in itself. For example, start by implementing an empty game, then add the simplest scenario and start implementing the rules (see above). In no time you'll see how the code evolves before your own eyes.
 
 Check example of tests here:
-  - ...
-  - ...
-  - ...
+  - A new game has no cells
+  - A new game after a tick ... nothing changes
+  - A new game, when I add a new live cell, after a tick the single cell dies alone
+  - A game with 3 cells distant from each other (0,0 : 0,10 : 20,20), after a tick, they all die!!
+  - A game with 3 cells in a row (0,1 : 0,2 : 0,3), rotates as the clock ticks, and 3 cells always remain!
+  - A game with 3 initial cells in L formation (0,0 : 0,1 : 1,0), after a tick of the clock, we have a solid block of 4 living cells.
+  - A game with a block of 4 cells (0,0 : 0,1 : 1,0 : 1,1), stays stable and does not change as the clock ticks.
 
 To put the cherry on top, feel free to tinker with and add the visualization tool explained below.
 
@@ -69,4 +81,9 @@ Visualization
 Ryan Davis has been generous enough to add the following ...
 
 You can find the code inside the folder ``coding_tools/gol_visualization/". Check the README file to see how to use it with your code.
+
+Resources
+=========
+
+
 
