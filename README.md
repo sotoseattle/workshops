@@ -68,3 +68,5 @@ Visualization
 
 Ryan Davis has been generous enough to add the following ...
 
+You can find the code inside the folder ``coding_tools/gol_visualization/". Check the README file to see how to use it with your code.
+
