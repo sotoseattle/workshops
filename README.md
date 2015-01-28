@@ -34,7 +34,7 @@ Table of Contents
 GOL
 ===
 
-<p><img class="left" src="/images/Nov14/Game_of_life_pulsar.gif" width="200" />
+<p><img class="left" src="/images/Game_of_life_pulsar.gif" width="200" /><br/>
 “Game of life pulsar” by JokeySmurf <a href="http://commons.wikimedia.org/wiki/File:Game_of_life_pulsar.gif#mediaviewer/File:Game_of_life_pulsar.gif">Licensed under Public domain via Wikimedia Commons</a></p>
 
 bla bla bla
