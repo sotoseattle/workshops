@@ -1,26 +1,11 @@
-# Ruby Romp Workshop
+# Workshops
 
-Seattle.rb Study Group repository for Seattle.rb Ruby Workshopping.
+### Seattle Ruby Workshops.
 
-To get access, create a pull request to get permissions to push your changes.
-
-Setup
-=====
-
-Feel free to create a directory for your account name (like mine: /SeaRbSg/sotoseattle) and submit any code. Please make sure to follow Ryan's James Brown Guide to git etiquette:
-
-[alias]
-down = pull --rebase
-onup = push
-
-Now you too can join the James Brown school of git:
-
-git down && git onup
+Feel free to fork this repo and code away!
 
 Session I: Game of Life (gol)
 =============================
-
-Seattle.rb Study Group repository for workshop code based on the "Game of Life" (aka gol). Create a folder called "gol" inside your personal folder (i.e. SeaRbSg/sotoseattle/gol).
 
 Table of Contents
 -----------------
