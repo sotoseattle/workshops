@@ -39,3 +39,4 @@ class Chart
     [bottom_left_corner, top_right_corner]
   end
 end
+

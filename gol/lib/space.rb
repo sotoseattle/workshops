@@ -1,7 +1,10 @@
 require 'set'
+require_relative './location'
 
-class World < Set
+class Space < Set
   alias_method :number_of_living_cells, :size
+  alias_method :create_cell_at,         :add
+  alias_method :kill_cell_at,           :delete
 
   def unsustainable_locations
     select { |loc| !survives?(loc) }
@@ -31,3 +34,4 @@ class World < Set
     location.adjacents.count { |loc| include?(loc) }
   end
 end
+
