@@ -8,7 +8,7 @@ Feel free to fork this repo and code away!
 - [GoL](#gol)
 - [How to go about it](#how-to-go-about-it)
 - [Visualization](#visualization)
-- [Restrictions](#constraints)
+- [Constraints](#constraints)
 - [Resources](#resources)
 
 GoL
@@ -26,8 +26,8 @@ The initial pattern constitutes the seed of the system. The first generation is 
 
 Check online an [interactive example](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/)
 
-How to go about it (testing)
-============================
+How to go about it
+==================
 
 How do we know that our code of GoL works as it should? The intuitive answer is because we can see with our own eyes how cells are created and destroyed at each moment. We see how they evolve, therefore we believe it works.
 
