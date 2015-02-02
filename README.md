@@ -3,9 +3,7 @@
 Feel free to fork this repo and code away!
 
 ##Session I: Game of Life (GoL)
-
-Table of Contents
------------------
+<img src="/public/images/Game_of_life_pulsar.gif" width="200" align="right"/>
 
 - [GoL](#gol)
 - [How to go about it](#how-to-go-about-it)
@@ -16,8 +14,6 @@ Table of Contents
 GoL
 ===
 
-<p><img class="left" src="/public/images/Game_of_life_pulsar.gif" width="200" /><br/>
-“Game of life pulsar” by JokeySmurf <a href="http://commons.wikimedia.org/wiki/File:Game_of_life_pulsar.gif#mediaviewer/File:Game_of_life_pulsar.gif">Licensed under Public domain via Wikimedia Commons</a></p>
 
 Game of Life "exists" in an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, dead or alive. Every cell interacts with its eight neighbors, which are the cells that are directly horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
 
@@ -67,15 +63,15 @@ Once you are familiar with the Game of Life, and you have your own coding soluti
 
 * **Object Calisthenics**. You can find even more possible constraints in the document included in public/ folder: "9 steps to better software design today", by Jeff Bay:
 
->> 1. One level of indentation per method
-2. Don’t use the ELSE keyword
-3. Wrap all primitives and Strings
-4. First class collections
-5. One dot per line
-6. Don’t abbreviate
-7. Keep all entities small
-8. No classes with more than two instance variables
-9. No getters/setters/properties
+    1. One level of indentation per method
+    2. Don’t use the ELSE keyword
+    3. Wrap all primitives and Strings
+    4. First class collections
+    5. One dot per line
+    6. Don’t abbreviate
+    7. Keep all entities small
+    8. No classes with more than two instance variables
+    9. No getters/setters/properties
 
 We will summarize the best constraints in the Wheel of Misfortune for you to play with. Nevertheless, you are free to pick and choose whatever constraints you want to apply, so feel free to be creative.
 
