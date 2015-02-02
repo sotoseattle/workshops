@@ -14,6 +14,7 @@ Table of Contents
 - [Rules](#rules)
 - [How to go about it](#how-to-go-about-it)
 - [Visualization](#visualization)
+- [Restrictions](#constraints)
 - [Resources](#resources)
 
 GOL
@@ -44,9 +45,9 @@ How to go about it (testing)
 
 How do we know that our code of GOL is behaving as it should? The intuitive answer is because we can see with our own eyes how cells are created and destroyed at each moment. We see how they evolve, therefore we believe it works.
 
-The reality is that it is not necessary to see to believe (although it surely helps!). It is all about testing. You don't need to visualize the board to check that the code behaves as it should. The best way is through thorough testing.
+The reality is that it is not necessary to see to believe (although it surely helps!). It is all about testing. So make sure you test well! Testing is an art in itself.
 
-So make sure you test well. It is an art in itself. For example, start by implementing an empty game, then add the simplest scenario and start implementing the rules (see above). In no time you'll see how the code evolves before your own eyes.
+For example, start by implementing an empty game, then add the simplest scenario and start adding the four rules of the game.
 
 Check example of tests here:
   - A new game has no cells
@@ -59,13 +60,37 @@ Check example of tests here:
 
 To put the cherry on top, feel free to tinker with and add the visualization tool explained below.
 
-
 Visualization
 =============
 
 Ryan Davis has been generous enough to add the following ...
 
 You can find the code inside the folder ``coding_tools/gol_visualization/". Check the README file to see how to use it with your code.
+
+Constraints
+============
+
+Once you are familiar with the Game of Life, and you have your own coding solution, the fun begins. In the workshop we will recode GoL from scratch but with additional constraints. Possible constraints are:
+
+* **Methods cannot have more than 3 lines**.
+* **No conditional statements**. Be creative and find other ways to achieve the same results (i.e. type-based polymorphism, lookup tables).
+* **No primitives** across method boundaries (input or output). Cannot pass around data primitives (booleans, numbers or strings). Neither you can pass primitive data structures such as arrays, lists or Enumerables.
+* **Mute ping-pong pairing**. Like what Aaron and Ryan did last month with the Gilded Rose kata. One writes the tests, the other writes the code to pass those tests. They can only communicate through tests and code. Comments not allowed.
+* **No return values**. Your methods cannot return values. Instead, use message passing between objects.
+
+* **Object Calisthenics**. You can find even more possible constraints in the document included in public/ folder: "9 steps to better software design today", by Jeff Bay:
+
+>> 1. One level of indentation per method
+2. Don’t use the ELSE keyword
+3. Wrap all primitives and Strings
+4. First class collections
+5. One dot per line
+6. Don’t abbreviate
+7. Keep all entities small
+8. No classes with more than two instance variables
+9. No getters/setters/properties
+
+We will summarize the best constraints in the Wheel of Misfortune for you to play with. Nevertheless, you are free to pick and choose whatever constraints you want to apply, so feel free to be creative.
 
 Resources
 =========
