@@ -1,34 +1,24 @@
-# Workshops
-
-### Seattle Ruby Workshops.
+# Seattle Ruby Workshops
 
 Feel free to fork this repo and code away!
 
 Session I: Game of Life (GoL)
 =============================
 
-<iframe width="854" height="510" src="https://www.youtube.com/embed/C2vgICfQawE" frameborder="0" allowfullscreen></iframe>
-
 Table of Contents
 -----------------
 
 - [GoL](#gol)
-- [Rules](#rules)
 - [How to go about it](#how-to-go-about-it)
 - [Visualization](#visualization)
 - [Restrictions](#constraints)
 - [Resources](#resources)
 
-GOL
+GoL
 ===
-
-
 
 <p><img class="left" src="/public/images/Game_of_life_pulsar.gif" width="200" /><br/>
 “Game of life pulsar” by JokeySmurf <a href="http://commons.wikimedia.org/wiki/File:Game_of_life_pulsar.gif#mediaviewer/File:Game_of_life_pulsar.gif">Licensed under Public domain via Wikimedia Commons</a></p>
-
-Rules
-=====
 
 Game of Life "exists" in an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, dead or alive. Every cell interacts with its eight neighbors, which are the cells that are directly horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
 
@@ -44,13 +34,12 @@ Check online an [interactive example](http://pmav.eu/stuff/javascript-game-of-li
 How to go about it (testing)
 ============================
 
-How do we know that our code of GOL is behaving as it should? The intuitive answer is because we can see with our own eyes how cells are created and destroyed at each moment. We see how they evolve, therefore we believe it works.
+How do we know that our code of GoL works as it should? The intuitive answer is because we can see with our own eyes how cells are created and destroyed at each moment. We see how they evolve, therefore we believe it works.
 
-The reality is that it is not necessary to see to believe (although it surely helps!). It is all about testing. So make sure you test well! Testing is an art in itself.
+It is not necessary to see to believe (although it surely helps!). A much better way to go about it by testing thoroughly. Testing is an art in itself.
 
-For example, start by implementing an empty game, then add the simplest scenario and start adding the four rules of the game.
+As an example, you can start by implementing an empty game, then add the simplest scenario possible and only then start adding test for each of the four rules of the game:
 
-Check example of tests here:
   - A new game has no cells
   - A new game after a tick ... nothing changes
   - A new game, when I add a new live cell, after a tick the single cell dies alone
@@ -58,8 +47,6 @@ Check example of tests here:
   - A game with 3 cells in a row (0,1 : 0,2 : 0,3), rotates as the clock ticks, and 3 cells always remain!
   - A game with 3 initial cells in L formation (0,0 : 0,1 : 1,0), after a tick of the clock, we have a solid block of 4 living cells.
   - A game with a block of 4 cells (0,0 : 0,1 : 1,0 : 1,1), stays stable and does not change as the clock ticks.
-
-To put the cherry on top, feel free to tinker with and add the visualization tool explained below.
 
 Visualization
 =============
@@ -97,6 +84,7 @@ Resources
 =========
 
 * [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), in Wikipedia.
+* [A must see visualization!](https://www.youtube.com/embed/C2vgICfQawE)
 * ["Understanding the 4 rules of simple design"](www.coreyhaines.com), by Corey Haines. Lessons from watching thousands of pairs work on Conway's Game of Life.
 * [Community of for Conway's GoL and related cellular automata](http://conwaylife.com/)
-
+* [Interactive Example](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/)
