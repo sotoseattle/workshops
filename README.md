@@ -4,13 +4,15 @@
 
 Feel free to fork this repo and code away!
 
-Session I: Game of Life (gol)
+Session I: Game of Life (GoL)
 =============================
+
+<iframe width="854" height="510" src="https://www.youtube.com/embed/C2vgICfQawE" frameborder="0" allowfullscreen></iframe>
 
 Table of Contents
 -----------------
 
-- [GOL](#gol)
+- [GoL](#gol)
 - [Rules](#rules)
 - [How to go about it](#how-to-go-about-it)
 - [Visualization](#visualization)
@@ -20,11 +22,10 @@ Table of Contents
 GOL
 ===
 
+
+
 <p><img class="left" src="/public/images/Game_of_life_pulsar.gif" width="200" /><br/>
 “Game of life pulsar” by JokeySmurf <a href="http://commons.wikimedia.org/wiki/File:Game_of_life_pulsar.gif#mediaviewer/File:Game_of_life_pulsar.gif">Licensed under Public domain via Wikimedia Commons</a></p>
-
-bla bla bla
-
 
 Rules
 =====
@@ -95,5 +96,7 @@ We will summarize the best constraints in the Wheel of Misfortune for you to pla
 Resources
 =========
 
-
+* [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), in Wikipedia.
+* ["Understanding the 4 rules of simple design"](www.coreyhaines.com), by Corey Haines. Lessons from watching thousands of pairs work on Conway's Game of Life.
+* [Community of for Conway's GoL and related cellular automata](http://conwaylife.com/)
 
