@@ -2,8 +2,7 @@
 
 Feel free to fork this repo and code away!
 
-Session I: Game of Life (GoL)
-=============================
+##Session I: Game of Life (GoL)
 
 Table of Contents
 -----------------
@@ -51,9 +50,9 @@ As an example, you can start by implementing an empty game, then add the simples
 Visualization
 =============
 
-Ryan Davis has been generous enough to add the following ...
+Ryan Davis will add a small utility class to visualize GoL so we can focus on getting the rules implementation right.
 
-You can find the code inside the folder ``coding_tools/gol_visualization/". Check the README file to see how to use it with your code.
+You will find the code inside the folder ``coding_tools/gol_visualization/" in the next few days.
 
 Constraints
 ============
@@ -83,8 +82,28 @@ We will summarize the best constraints in the Wheel of Misfortune for you to pla
 Resources
 =========
 
-* [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), in Wikipedia.
-* [A must see visualization!](https://www.youtube.com/embed/C2vgICfQawE)
+####General
+
+* [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), from Wikipedia.
+* [The original article from 1970](http://www.ibiblio.org/lifepatterns/october1970.html) that publicized GoL, from Martin Gardner in Scientific American.
 * ["Understanding the 4 rules of simple design"](www.coreyhaines.com), by Corey Haines. Lessons from watching thousands of pairs work on Conway's Game of Life.
-* [Community of for Conway's GoL and related cellular automata](http://conwaylife.com/)
-* [Interactive Example](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/)
+* [GoL Community and related cellular automata](http://conwaylife.com/)
+
+####Visualizations
+
+* [A must see video!](https://www.youtube.com/embed/C2vgICfQawE)
+* [Interactive example](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/)
+
+####Curious
+
+* [Patterns and resources](http://www.ibiblio.org/lifepatterns/)
+* [Turing Machine made of GoL](http://rendell-attic.org/gol/tm.htm)
+* [Primes calculator with GoL](http://pentadecathlon.com/lifeNews/2010/02/prime_numbers.html)
+
+####Code
+
+* [GoL coded in 70 different languages](http://rosettacode.org/wiki/Conway%27s_Game_of_Life)
+* [in HTML5](http://www.julianpulgarin.com/canvaslife/)
+* [An algorithm for compressing space and time](http://www.drdobbs.com/jvm/an-algorithm-for-compressing-space-and-t/184406478)
+* [Github search](https://github.com/search?utf8=%E2%9C%93&q=conway+game+of+life)
+
