@@ -14,6 +14,7 @@ Feel free to fork this repo and code away!
 GoL
 ===
 
+> "Mathematics is the simple bit. Its cats that are complicated.", John Conway 1970
 
 Game of Life "exists" in an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, dead or alive. Every cell interacts with its eight neighbors, which are the cells that are directly horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
 
@@ -80,6 +81,7 @@ Resources
 
 ####General
 
+* [Intro by Stephen Hawkings](https://www.youtube.com/watch?v=CgOcEZinQ2I&feature=youtu.be)
 * [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), from Wikipedia.
 * [The original article from 1970](http://www.ibiblio.org/lifepatterns/october1970.html) that publicized GoL, from Martin Gardner in Scientific American.
 * ["Understanding the 4 rules of simple design"](www.coreyhaines.com), by Corey Haines. Lessons from watching thousands of pairs work on Conway's Game of Life.
@@ -90,6 +92,7 @@ Resources
 * [A must see video!](https://www.youtube.com/embed/C2vgICfQawE)
 * [Mind-blowing demo in APL](https://t.co/YcxBavIj4b), HT Lito Nicolai (@lito_nico).
 * [Interactive example](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/)
+* [GoL implemented with GoL](https://www.youtube.com/watch?v=xP5-iIeKXE8)
 
 ####Curious
 
@@ -103,4 +106,6 @@ Resources
 * [in HTML5](http://www.julianpulgarin.com/canvaslife/)
 * [An algorithm for compressing space and time](http://www.drdobbs.com/jvm/an-algorithm-for-compressing-space-and-t/184406478)
 * [Github search](https://github.com/search?utf8=%E2%9C%93&q=conway+game+of+life)
+* [GoL in Minecraft with Smalltalk](https://www.youtube.com/watch?v=B7hl72b1-wc&feature=youtu.be&a)
+* [50 lines of JavaScript](http://jsfiddle.net/franciscop/1c6n7ze5/7/light/)
 
