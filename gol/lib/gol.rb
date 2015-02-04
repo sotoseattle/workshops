@@ -1,6 +1,5 @@
 require_relative './space'
 require_relative './time_arrow'
-require_relative './chart'
 
 class GOL
   attr_reader :world

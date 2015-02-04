@@ -77,11 +77,3 @@ class MultipleCelledGame < MiniTest::Test
   end
 end
 
-#class VisualizeGame < MiniTest::Test
-#  def test_visualize_returns_the_game_as_a_string
-#    game = GOL.new.add(new_cell_at(0, 0)).add(new_cell_at(0, 1))
-#           .add(new_cell_at(1, 0))
-#    assert_equal "XX\nX.\n", game.visualization
-#  end
-#end
-
