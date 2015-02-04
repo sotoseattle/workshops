@@ -88,6 +88,7 @@ Resources
 ####Visualizations
 
 * [A must see video!](https://www.youtube.com/embed/C2vgICfQawE)
+* [Mind-blowing demo in APL](https://t.co/YcxBavIj4b), HT Lito Nicolai (@lito_nico).
 * [Interactive example](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/)
 
 ####Curious
