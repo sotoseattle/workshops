@@ -31,11 +31,15 @@ class Visualization < Gosu::Window
     end
   end
 
+  def button_down(id)
+    close if id == Gosu::KbEscape
+  end
+
   private
 
   def kill_unseen_cells(gol)
     @gol.world.delete_if do |loc|
-      loc.x <= -1 || loc.y <= -1 || loc.x >= @side + 1 || loc.y >= @side + 1
+      loc.x < 0 || loc.y < 0 || loc.x > @side - 1 || loc.y > @side - 1
     end
   end
 end
