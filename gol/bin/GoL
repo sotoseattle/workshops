@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require_relative '../lib/gol'
+require_relative '../lib/visualization'
+
+# Step 1. Decide how size of the board, how many squares per side:
+n = 50
+
+# Step 2. Setup the seed (initial board) directly or randomly
+seed_cells = [
+  [1, 0],[1, 1], [1, 2],                   # rotator
+  [0, 0], [0, 1], [1, 0], [1, 1],          # block
+  [46,0], [46,1], [46,2], [47,2], [48,1]]  # glyder
+
+(n*Math.sqrt(n)).floor.times { seed_cells << [rand(n), rand(n)] }
+
+# Step 3. Start visualization and show the window
+game = GOL.new
+seed_cells.each { |pair| game.add(Location.new(*pair)) }
+window = Visualization.new(game, n)
+window.show
+
