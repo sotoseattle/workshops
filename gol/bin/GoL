@@ -6,12 +6,60 @@ require_relative '../lib/visualization'
 n = 50
 
 # Step 2. Setup the seed (initial board) directly or randomly
-seed_cells = [
-  [1, 0],[1, 1], [1, 2],                   # rotator
-  [5, 5], [5, 6], [6, 5], [6, 6],          # block
-  [46,0], [46,1], [46,2], [47,2], [48,1]]  # glyder
 
+# Directly
+#seed_cells = [
+#  [1, 0],[1, 1], [1, 2],                   # rotator
+#  [5, 5], [5, 6], [6, 5], [6, 6],          # block
+#  [46,0], [46,1], [46,2], [47,2], [48,1]]  # glyder
+
+# Randomly
 #(n*Math.sqrt(n)).floor.times { seed_cells << [rand(n), rand(n)] }
+
+# Or use a pattern (http://conwaylife.com/wiki/Category:Animated_images)
+pattern = "
+...........OO...........OO
+...........OO...........OO
+
+
+......O.......................O
+.....O.O.....O.........O.....O.O
+....O..O.....O.OO...OO.O.....O..O
+.....OO..........O.O..........OO
+...............O.O.O.O
+................O...O
+
+OO.................................OO
+OO.................................OO
+.....OO.......................OO
+
+......O.O...................O.O
+......O..O.................O..O
+.......OO...................OO
+
+.......OO...................OO
+......O..O.................O..O
+......O.O...................O.O
+
+.....OO.......................OO
+OO.................................OO
+OO.................................OO
+
+................O...O
+...............O.O.O.O
+.....OO..........O.O..........OO
+....O..O.....O.OO...OO.O.....O..O
+.....O.O.....O.........O.....O.O
+......O.......................O
+
+
+...........OO...........OO
+...........OO...........OO"
+
+seed_cells = []
+pattern.split("\n").each_with_index do |line, i|
+  line.chars.each_with_index { |x, j| seed_cells << [i+5, j+7] if x == "O" }
+end
 
 seed_cells.each { |x, y| fail 'Out of bounds' unless (x.between?(0, n-1) && y.between?(0, n-1)) }
 
