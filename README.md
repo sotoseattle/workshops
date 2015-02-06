@@ -93,6 +93,8 @@ Resources
 * [Mind-blowing demo in APL](https://t.co/YcxBavIj4b), HT Lito Nicolai (@lito_nico).
 * [Interactive example](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/)
 * [GoL implemented with GoL](https://www.youtube.com/watch?v=xP5-iIeKXE8)
+* [Gifs galore] (http://conwaylife.com/wiki/Category:Animated_images)
+* [763 Patterns] (http://conwaylife.com/wiki/Category:Patterns)
 
 ####Curious
 
