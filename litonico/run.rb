@@ -16,8 +16,8 @@ def run matrix
   life matrix
 end
 
-m = Matrix.identity 7
-
-fixpt do
-  run m
+fixpt 1 do |x|
+  puts x
+  x
 end
+

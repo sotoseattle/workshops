@@ -7,7 +7,7 @@ require 'matrix'
 #
 # There's no way to get a Matrix from an array of arrays
 #
-# Inverse is broken
+# Inverse only retuns rationals
 
 class Matrix
 
@@ -22,12 +22,21 @@ class Matrix
     Matrix[ *self.to_a.rotate(y).map {|row| row.rotate x} ]
   end
 
+  # Bitwise operations on boolean matrices
   def & other
-    self.zip(other).map{|i, j| i & j}
+    Matrix.Raise ErrDimensionMismatch unless
+      self.row_count == other.row_count and
+      self.column_count == other.column_count
+
+    Matrix.build(self.row_count){|i, j| self[i, j] & other[i, j] }
   end
 
   def | other
-    self.zip(other).map{|i, j| i | j}
+    Matrix.Raise ErrDimensionMismatch unless
+      self.row_count == other.row_count and
+      self.column_count == other.column_count
+
+    Matrix.build(self.row_count){|i, j| self[i, j] | other[i, j] }
   end
 
 end
