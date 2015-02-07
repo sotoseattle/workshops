@@ -20,9 +20,3 @@ end
 def life grid
   ((twos neighbors grid) & grid) | (threes neighbors grid)
 end
-
-puts life Matrix[[0, 0, 0, 0, 0],
-                 [0, 0, 1, 0, 0],
-                 [0, 0, 1, 0, 0],
-                 [0, 0, 1, 0, 0],
-                 [0, 0, 0, 0, 0]]
