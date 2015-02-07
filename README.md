@@ -2,6 +2,8 @@
 
 Feel free to fork this repo and code away!
 
+If you want to share your code you can always send us a pull request to be included in the submissions folder. If you are not sure, don't sweat it, just fork it and play with it.
+
 ##Session I: Game of Life (GoL)
 <img src="/public/images/Game_of_life_pulsar.gif" width="200" align="right"/>
 
@@ -43,6 +45,10 @@ As an example, you can start by implementing an empty game, then add the simples
   - A game with 3 cells in a row (0,1 : 0,2 : 0,3), rotates as the clock ticks, and 3 cells always remain!
   - A game with 3 initial cells in L formation (0,0 : 0,1 : 1,0), after a tick of the clock, we have a solid block of 4 living cells.
   - A game with a block of 4 cells (0,0 : 0,1 : 1,0 : 1,1), stays stable and does not change as the clock ticks.
+
+You can find example code inside the submissions folder or checking the graph of members who have forked this repo (see picture below).
+
+<img src="/public/images/repo_banner.png" align="left"/>
 
 Visualization
 =============
