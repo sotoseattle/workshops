@@ -17,4 +17,8 @@ run = lambda do |matrix|
   life matrix
 end
 
-fixpt Matrix.identity(3), &run
+matrix = Matrix[[0, 1, 1],
+                [1, 1, 0],
+                [0, 1, 0]].take(10, 10).rotate(-5, -5)
+
+fixpt matrix, &run

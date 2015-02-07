@@ -14,7 +14,7 @@ def threes grid
 end
 
 def neighbors grid
-  sum( [-1, 0, 1].product([-1, 0, 1]).map{|x, y| grid.shift x, y } ) - grid
+  sum( [-1, 0, 1].product([-1, 0, 1]).map{|x, y| grid.rotate x, y } ) - grid
 end
 
 def life grid
