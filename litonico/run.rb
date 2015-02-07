@@ -8,17 +8,13 @@ def render matrix
 end
 
 def fixpt x, &f
-  fixpt f.call(x), f
-end
-
-def fixpt x, &f
   fixpt f.call(x), &f
 end
 
 run = lambda do |matrix|
   render matrix
-  sleep 0.5
+  sleep 0.2
   life matrix
 end
 
-fixpt Matrix.identity(7), &run
+fixpt Matrix.identity(3), &run

@@ -1,14 +1,5 @@
 require 'matrix'
 
-# Things wrong with Matrix:
-#
-# Enumerable methods return arrays, not matrices (zip),
-# except when they don't (map)
-#
-# There's no way to get a Matrix from an array of arrays
-#
-# Inverse only retuns rationals
-
 class Matrix
 
   # Pretty printing!
