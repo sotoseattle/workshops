@@ -1,12 +1,14 @@
 #lang racket
 (require rackunit)
+(require 2htdp/universe)
+(require 2htdp/image)
 ;(require racket/trace)
 
 ; 8 neighboring cells around a cell
 (define neighbors
   (lambda (cell)
-    (define x (x_coord cell))
-    (define y (y_coord cell))
+    (define x (x-coord cell))
+    (define y (y-coord cell))
     (cons (cons (+ x 1) (cons (- y 1) '()))
     (cons (cons (+ x 1) (cons y '()))
     (cons (cons (+ x 1) (cons (+ y 1) '()))
@@ -19,17 +21,17 @@
 (module+ test
   (check-equal? (neighbors '(0 0)) '((1 -1) (1 0) (1 1) (0 -1) (0 1) (-1 -1) (-1 0) (-1 1))))
 
-(define x_coord
+(define x-coord
   (lambda (cell)
     (car cell)))
 
-(define y_coord
+(define y-coord
   (lambda (cell)
     (car (cdr cell))))
 
 (define same-cell?
   (lambda (c1 c2)
-    (and (eq? (x_coord c1) (x_coord c2)) (eq? (y_coord c1) (y_coord c2)))))
+    (and (eq? (x-coord c1) (x-coord c2)) (eq? (y-coord c1) (y-coord c2)))))
 
 ; does a board include a specific cell?
 (define include?
@@ -153,13 +155,50 @@
       [(null? lat1) lat2]
       [else (cons (car lat1) (add-lats (cdr lat1) lat2))])))
 
-(define tick
+(define time-passes
   (lambda (n board)
     (cond
       [(zero? n) (print 'bye)]
       [else (and
              (pretty-print board)
-             (tick (- n 1) (uniq (add-lats (new-living-cells board) (staying-alive board)))))])))
+             (time-passes (- n 1) (uniq (add-lats (new-living-cells board) (staying-alive board)))))])))
 
-;(tick 10 '((0 0) (0 1) (0 2)))
-;(tick 3 '((0 0) (0 1) (1 0)))
+;(time_passes 10 '((0 0) (0 1) (0 2)))
+;(time_passes 3 '((0 0) (0 1) (1 0)))
+
+; VISUALIZATION
+
+(define tick-of-the-clock
+  (lambda (render_board)
+    (uniq (add-lats (new-living-cells render_board) (staying-alive render_board)))))
+
+(define WIDTH 800)
+(define SIDE 16)
+(define SEED '((6 18) (6 19) (6 31) (6 32) (7 18) (7 19) (7 31) (7 32) (10 13) (10 37) (11 12) 
+               (11 14) (11 20) (11 30) (11 36) (11 38) (12 11) (12 14) (12 20) (12 22) (12 23) 
+               (12 27) (12 28) (12 30) (12 36) (12 39) (13 12) (13 13) (13 24) (13 26) (13 37) 
+               (13 38) (14 22) (14 24) (14 26) (14 28) (15 23) (15 27) (17 7) (17 8) (17 42) (17 43) 
+               (18 7) (18 8) (18 42) (18 43) (19 12) (19 13) (19 37) (19 38) (21 13) (21 15) (21 35) 
+               (21 37) (22 13) (22 16) (22 34) (22 37) (23 14) (23 15) (23 35) (23 36) (25 14) (25 15) 
+               (25 35) (25 36) (26 13) (26 16) (26 34) (26 37) (27 13) (27 15) (27 35) (27 37) (29 12) 
+               (29 13) (29 37) (29 38) (30 7) (30 8) (30 42) (30 43) (31 7) (31 8) (31 42) (31 43) 
+               (33 23) (33 27) (34 22) (34 24) (34 26) (34 28) (35 12) (35 13) (35 24) (35 26) (35 37) 
+               (35 38) (36 11) (36 14) (36 20) (36 22) (36 23) (36 27) (36 28) (36 30) (36 36) (36 39) 
+               (37 12) (37 14) (37 20) (37 30) (37 36) (37 38) (38 13) (38 37) (41 18) (41 19) (41 31) 
+               (41 32) (42 18) (42 19) (42 31) (42 32)))
+(define WTF (rectangle SIDE SIDE "solid" "slateblue"))
+
+(define draw-board-on-empty-scene
+  (lambda (living-cells)
+    (cond
+      [(null? living-cells) (empty-scene WIDTH WIDTH)]
+      [else (place-image WTF 
+                         (* (x-coord (car living-cells)) SIDE) 
+                         (* (y-coord (car living-cells)) SIDE) 
+                         (draw-board-on-empty-scene (cdr living-cells)))])))
+
+(big-bang SEED
+          (on-tick tick-of-the-clock 0.3)
+          (to-draw draw-board-on-empty-scene))
+
+; tip: consing an image into a scene // into a scene // recursion ... // empty-scene
