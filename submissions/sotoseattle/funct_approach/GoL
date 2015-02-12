@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby -w
 require_relative './lib/visualization'
 
 # Step 1. Decide how size of the board, how many squares per side:
@@ -49,8 +49,7 @@ pattern.split("\n").each_with_index do |line, i|
   line.chars.each_with_index { |x, j| seed_cells << [i+5, j+7] if x == "O" }
 end
 
-seed_cells.each { |x, y| fail 'Out of bounds' unless (x.between?(0, n-1) && y.between?(0, n-1)) }
-
 # Step 3. Start visualization and show the window
+
 Visualization.new(seed_cells, n).show
 

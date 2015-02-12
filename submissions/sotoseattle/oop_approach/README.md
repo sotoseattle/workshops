@@ -29,3 +29,18 @@ In order to re-use the Visualization class with your own code consider two thing
 2.- How you keep track of the state of the board. In my case, instead of tracking all the cells of the board (since a priori it is infinite). I track only the living cells. You, in the other hand, may be tracking the whole board because you consider it to be finite. Take this into account when redrawing the board, since you'll have to differentiate each cell as dead or alive and color it accordingly.
 
 I hope there are few bugs in my code, that it is useful to you, and that you have fun coding the GoL!
+
+####To Run
+
+With my Visualization class:
+
+```bash
+$ bin/GoL
+```
+
+With Ryan's Visualization Adaptor
+
+```bash
+$ ruby bin/play.rb
+```
+

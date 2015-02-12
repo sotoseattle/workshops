@@ -56,16 +56,16 @@ OO.................................OO
 ...........OO...........OO
 ...........OO...........OO"
 
-seed_cells = []
+game = GOL.new
+
 pattern.split("\n").each_with_index do |line, i|
-  line.chars.each_with_index { |x, j| seed_cells << [i+5, j+7] if x == "O" }
+  line.chars.each_with_index do |x, j|
+    game.add Location.new(i+5, j+7) if x == "O"
+  end
 end
 
-seed_cells.each { |x, y| fail 'Out of bounds' unless (x.between?(0, n-1) && y.between?(0, n-1)) }
-
 # Step 3. Start visualization and show the window
-game = GOL.new
-seed_cells.each { |pair| game.add(Location.new(*pair)) }
+
 window = Visualization.new(game, n)
 window.show
 

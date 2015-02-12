@@ -53,9 +53,11 @@ You can find example code inside the submissions folder or checking the graph of
 Visualization
 =============
 
-Ryan Davis will add a small utility class to visualize GoL so we can focus on getting the rules implementation right.
+Ryan Davis has added a small set of classes to visualize GoL so we can focus on getting the rules implementation right. Kudos ZenSpider! :clap: :clap: :clap:
 
-You will find the code inside the folder ``coding_tools/gol_visualization/" in the next few days.
+You will find the code inside the folder ``coding_tools/gol_visualization/".
+
+If it is any help, you can check how I adapted his visualization code in my OO and Functional implementations in. It is inside the /submissions/sotoseattle folder (check out the READMEs).
 
 Constraints
 ============

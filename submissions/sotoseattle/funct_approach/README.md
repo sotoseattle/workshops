@@ -43,8 +43,17 @@ The visualization tool I used requires the GOSU gem [website](http://www.libgosu
 
 Gosu makes it extremelly easy to set up the visualization of the board.
 
-#### Next Steps
+####To Run
 
-- Make it recursive and implement Tail Call Optimization ??
-- But then, how could I make it work with the visualization window object ??
+With my Visualization class:
+
+```bash
+$ ./GoL
+```
+
+With Ryan's Visualization Adaptor
+
+```bash
+$ ruby play.rb
+```
 
