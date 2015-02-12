@@ -20,10 +20,10 @@ GoL
 
 Game of Life "exists" in an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, dead or alive. Every cell interacts with its eight neighbors, which are the cells that are directly horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
 
-- Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
-- Any live cell with more than three live neighbours dies, as if by overcrowding.
-- Any live cell with two or three live neighbours lives on to the next generation.
-- Any dead cell with exactly three live neighbours becomes a live cell.
+- Any live cell with fewer than two live neighbors dies, as if caused by underpopulation.
+- Any live cell with more than three live neighbors dies, as if by overcrowding.
+- Any live cell with two or three live neighbors lives on to the next generation.
+- Any dead cell with exactly three live neighbors becomes a live cell.
 
 The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed. Births and deaths happen simultaneously, and the discrete moment at which this happens is sometimes called a tick (in other words, each generation is a pure function of the one before). The rules continue to be applied repeatedly to create further generations.
 
@@ -53,7 +53,7 @@ You can find example code inside the submissions folder or checking the graph of
 Visualization
 =============
 
-Ryan Davis has added a small set of classes to visualize GoL so we can focus on getting the rules implementation right. Kudos ZenSpider! :clap: :clap: :clap:
+Ryan Davis has added a small set of classes to visualize GoL so we can focus on getting the implementation of the rules right. Kudos ZenSpider! :clap: :clap: :clap:
 
 You will find the code inside the folder ``coding_tools/gol_visualization/".
 
