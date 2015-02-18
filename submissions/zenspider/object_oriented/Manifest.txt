@@ -1,0 +1,8 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/game_of_life
+lib/game_of_life.rb
+test/test_game_of_life.rb

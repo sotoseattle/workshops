@@ -1,0 +1,56 @@
+= game_of_life
+
+home :: https://github.com/seattlerb/game_of_life
+rdoc :: http://docs.seattlerb.org/game_of_life
+
+== DESCRIPTION:
+
+Game of Life "exists" in an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, dead or alive. Every cell interacts with its eight neighbors, which are the cells that are directly horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
+
+- Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
+- Any live cell with more than three live neighbours dies, as if by overcrowding.
+- Any live cell with two or three live neighbours lives on to the next generation.
+- Any dead cell with exactly three live neighbours becomes a live cell.
+
+The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed. Births and deaths happen simultaneously, and the discrete moment at which this happens is sometimes called a tick (in other words, each generation is a pure function of the one before). The rules continue to be applied repeatedly to create further generations.
+
+== FEATURES/PROBLEMS:
+
+* FIX (list of features or problems)
+
+== SYNOPSIS:
+
+  FIX (code sample of usage)
+
+== REQUIREMENTS:
+
+* FIX (list of requirements)
+
+== INSTALL:
+
+* sudo gem install game_of_life
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) Ryan Davis, seattle.rb
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
