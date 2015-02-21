@@ -7,7 +7,7 @@ require "gosu"
 # older)
 
 class GameWindow < Gosu::Window
-  C = Gosu::Color::WHITE
+  C = Gosu::Color::GREEN
 
   attr_accessor :adaptor
 
@@ -31,7 +31,7 @@ class GameWindow < Gosu::Window
 
   def rect x, y
     x1, y1 = x*10, y*10
-    x2, y2 = x1+10, y1+10
+    x2, y2 = x1+9, y1+9
     draw_quad x1, y1, C, x1, y2, C, x2, y2, C, x2, y1, C
   end
 end
