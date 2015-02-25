@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require "conway_gol"
+
+brain = ConwayGameOfLife::Brain.new
+
+# acorn-style seed data
+[
+  [22, 21],
+  [21, 23],
+  [22, 23],
+  [24, 22],
+  [25, 23],
+  [26, 23],
+  [27, 23]
+].each do |(x, y)|
+  brain.spawn(x, y)
+end
+
+visualizer = ConwayGameOfLife::Visualizer.new(brain)
+visualizer.show
