@@ -25,4 +25,20 @@ class EmptyGame < Minitest::Test
   def test_an_empty_game_has_no_living_cells
     assert_equal 0, @game.alive.size
   end
+
+  def test_an_empty_game_after_a_tick_still_is_empty
+    assert_equal 0, @game.tick.alive.size
+  end
+end
+
+class LivingCellsGame < Minitest::Test
+  def setup
+    @game = GoL.new
+  end
+
+  def test_1_living_cell_dies_after_a_tick
+    assert 0, @game.add([0,0]).tick.alive.size
+  end
+
+
 end
