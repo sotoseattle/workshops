@@ -17,10 +17,12 @@ BLOCK9 = [[0,0], [0,1], [0,2],
 
 
 
-class Something < Minitest::Test
+class EmptyGame < Minitest::Test
   def setup
+    @game = GoL.new
   end
 
-  def test_blablabla
+  def test_an_empty_game_has_no_living_cells
+    assert_equal 0, @game.alive.size
   end
 end
