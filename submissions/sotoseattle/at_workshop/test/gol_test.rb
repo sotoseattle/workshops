@@ -37,8 +37,31 @@ class LivingCellsGame < Minitest::Test
   end
 
   def test_1_living_cell_dies_after_a_tick
-    assert 0, @game.add([0,0]).tick.alive.size
+    assert 0, @game.add([[0,0]]).tick.alive.size
   end
 
+  def test_cell_with_less_than_2_neighbors_dies
+    refute_includes @game.add(ROW).tick.alive, [0,0]
+  end
+
+  def test_cell_with_2_neighbors_lives
+    assert_includes @game.add(ROW).tick.alive, [1,0]
+  end
+
+  def test_cell_with_3_neighbors_lives
+    assert_includes @game.add(ROW).tick.alive, [1,0]
+  end
+
+  def test_cell_with_8_neighbors_lives
+    refute_includes @game.add(BLOCK9).tick.alive, [1,1]
+  end
+end
+
+class GerminatingCells < Minitest::Test
+
+  def test_1_neighbor_stays_dead
+    refute_includes GoL.new.add(ROW).tick.alive, [-1,0]
+  end
 
 end
+
