@@ -63,5 +63,10 @@ class GerminatingCells < Minitest::Test
     refute_includes GoL.new.add(ROW).tick.alive, [-1,0]
   end
 
+  def test_3_neighbors_comes_alive
+    assert_includes GoL.new.add(ROW).tick.alive, [1,1]
+  end
+
+
 end
 
