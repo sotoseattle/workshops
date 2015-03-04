@@ -16,57 +16,65 @@ BLOCK9 = [[0,0], [0,1], [0,2],
           [2,0], [2,1], [2,2]]
 
 
-
 class EmptyGame < Minitest::Test
   def setup
     @game = GoL.new
   end
 
-  def test_an_empty_game_has_no_living_cells
+  def test_a_new_game_everybody_dead
     assert_equal 0, @game.alive.size
   end
 
-  def test_an_empty_game_after_a_tick_still_is_empty
+  def test_new_game_with_no_cells_nothing_changes
     assert_equal 0, @game.tick.alive.size
   end
 end
 
-class LivingCellsGame < Minitest::Test
+class LivingCellsRule < Minitest::Test
   def setup
     @game = GoL.new
   end
 
-  def test_1_living_cell_dies_after_a_tick
-    assert 0, @game.add([[0,0]]).tick.alive.size
+  def test_single_cell_game_dies_alone
+    assert_equal 0, @game.add([[10,20]]).tick.alive.size
   end
 
-  def test_cell_with_less_than_2_neighbors_dies
-    refute_includes @game.add(ROW).tick.alive, [0,0]
+  def test_cells_with_2_or_3_neighbors_survives
+    assert @game.add(HAT).tick.alive.superset? HAT.to_set
   end
 
-  def test_cell_with_2_neighbors_lives
-    assert_includes @game.add(ROW).tick.alive, [1,0]
-  end
-
-  def test_cell_with_3_neighbors_lives
-    assert_includes @game.add(ROW).tick.alive, [1,0]
-  end
-
-  def test_cell_with_8_neighbors_lives
+  def test_cell_with_more_than_3_neighbors_dies
     refute_includes @game.add(BLOCK9).tick.alive, [1,1]
+  end
+
+  def test_3_cells_in_a_row_only_middle_one_survives
+    @game.add(ROW).tick
+    assert_includes @game.alive, [1, 0]
+    refute_includes @game.alive, [0, 0]
+    refute_includes @game.alive, [2, 0]
   end
 end
 
-class GerminatingCells < Minitest::Test
-
-  def test_1_neighbor_stays_dead
-    refute_includes GoL.new.add(ROW).tick.alive, [-1,0]
+class GerminatingCellsRule < Minitest::Test
+  def setup
+    @game = GoL.new
   end
 
-  def test_3_neighbors_comes_alive
-    assert_includes GoL.new.add(ROW).tick.alive, [1,1]
+  def test_a_dead_cell_next_to_1_live_cell_stays_dead
+    refute_includes @game.add(ROW).tick.alive, [-1,0]
   end
 
+  def test_a_dead_cell_next_to_2_live_cell_stays_dead
+    refute_includes @game.add(ROW).tick.alive, [0,1]
+  end
 
+  def test_a_dead_cell_next_to_3_live_cell_comes_alive
+    assert_includes @game.add(ROW).tick.alive, [1,1]
+  end
+
+  def test_a_dead_cell_next_to_more_than_3_live_cell_stays_dead
+    donut = BLOCK9 - [1,1]
+    refute_includes @game.add(donut).tick.alive, [1,1]
+  end
 end
 
